@@ -1,9 +1,9 @@
 module.exports = {
     host: 'localhost',
-    user: 'root',
+    user: 'daryl',
     password: '',
-    db: 'AssistantAI',
-    dialect: 'mysql',
+    db: 'assistantai2',
+    dialect: 'postgresql',
 
     pool: {
         max: 10,

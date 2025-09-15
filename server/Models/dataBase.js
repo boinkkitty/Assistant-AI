@@ -1,8 +1,26 @@
 const {Sequelize, DataTypes} = require('sequelize')
+const dbConfig = require('../config/dbConfig.js');
 
-const dbURL = process.env.DATABASE_URL;
+// const dbURL = process.env.DATABASE_URL;
 
-const sequelize = new Sequelize(`${dbURL}`);
+// const sequelize = new Sequelize(`${dbURL}`);
+
+const sequelize = new Sequelize(
+    dbConfig.db,
+    dbConfig.user,
+    dbConfig.password,
+    {
+        host: dbConfig.host,
+        dialect: dbConfig.dialect,
+
+        pool: {
+            max: dbConfig.pool.max,
+            min: dbConfig.pool.min,
+            acquire: dbConfig.pool.acquire,
+            idle: dbConfig.pool.idle
+        }
+    }
+)
 
 sequelize.authenticate()
 .then(() => {

@@ -5,6 +5,8 @@
     "crypto-js": "^4.2.0",
     "dotenv": "^16.4.5",
     "jest-extended": "^4.0.2",
+    "pg": "^8.12.0",
+    "pg-hstore": "^2.3.4",
     "react-modal": "^3.16.1"
   },
   "scripts": {
