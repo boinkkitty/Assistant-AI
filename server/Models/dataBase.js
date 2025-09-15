@@ -1,4 +1,5 @@
 const {Sequelize, DataTypes} = require('sequelize')
+
 const dbConfig = require('../config/dbConfig.js');
 
 // const dbURL = process.env.DATABASE_URL;
